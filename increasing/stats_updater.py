@@ -62,9 +62,9 @@ if __name__ == '__main__':
     import django
     django.setup()
     parser = argparse.ArgumentParser()
-    parser.add_argument("--interval", default=5, help='interval between data point collection, in seconds')
+    parser.add_argument("--interval", default=5, type=float, help='interval between data point collection, in seconds')
     parser.add_argument("--hosts_url", default=HOSTS_URL)
-    parser.add_argument("--update_threshold", default=5, help='number of data points to collect before updating increasing flag')
+    parser.add_argument("--update_threshold", default=5, type=int, help='number of data points to collect before updating increasing flag')
     args = parser.parse_args()
 
     
